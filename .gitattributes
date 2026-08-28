@@ -1,0 +1,21 @@
+# Normalise line endings so the repo is identical regardless of which OS a
+# contributor is on. Text files are stored LF in git and checked out with the
+# platform's native ending. This also silences Git for Windows' "LF will be
+# replaced by CRLF" warnings, which are informational rather than errors.
+* text=auto
+
+# Explicit, so these never get mangled by heuristics.
+*.py    text diff=python
+*.js    text
+*.jsx   text
+*.json  text
+*.css   text
+*.html  text
+*.md    text
+
+# Binary - never touch these.
+*.png   binary
+*.jpg   binary
+*.tif   binary
+*.tiff  binary
+*.zip   binary
